@@ -29,28 +29,28 @@ public class ModelController {
     @RequestMapping(value = "/model", method = RequestMethod.POST, consumes = "application/json")
     @ResponseStatus(HttpStatus.CREATED)
     public void createNewModel(@RequestBody @Valid Model model) {
-        /* write your code here */
+      
          modelService.saveModel(model);
     }
 
     @RequestMapping(value = "/erase", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.OK)
     public void deleteAllModels() {
-        /* write your code here */
+       
          modelService.deleteAllModels();
     }
 
     @RequestMapping(value = "/model/{id}", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.OK)
     public void deleteModelById(@RequestParam Long id) {
-        /* write your code here */
+     
          modelService.deleteModelById(id);
     }
 
     @RequestMapping(value = "/model", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public List<Model> getAllModels() {
-        /* write your code here */
+       
         public List<Model> getAllModels();
         return modelService.getModelById(id);
     }
@@ -58,7 +58,7 @@ public class ModelController {
     @RequestMapping(value = "/model/{id}", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public Model getModelById(Long id) {
-        /* write your code here */
+        
         return modelService.getModelById(id);
     }
 }
